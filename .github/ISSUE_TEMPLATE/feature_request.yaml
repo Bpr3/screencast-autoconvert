@@ -1,0 +1,72 @@
+name: "💡 Feature Request"
+description: Suggest a new feature or enhancement for screencast-autoconvert.
+title: "💡 [FEAT] - <title>"
+labels:
+  - "feature"
+assignees:
+  - "Bpr3"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        <p align="center">
+          <em><a href="https://github.com/Bpr3/screencast-autoconvert">screencast-autoconvert Repository</a> — Licensed under MIT.</em>
+        </p>
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: "Before Submitting"
+      description: Please confirm the following to help us process your request efficiently.
+      options:
+        - label: I have checked if this feature already exists or has been requested before.
+          required: true
+        - label: This feature aligns with the goals of screencast-autoconvert (e.g., improving WebM to MP4 conversion or compatibility).
+          required: false
+  - type: textarea
+    id: feature-description
+    attributes:
+      label: "What's the Problem?"
+      description: Help us understand the problem you're facing or the limitation you're experiencing with screencast-autoconvert.
+      placeholder: "Hint: ‘brevity is the soul of wit’, Hamlet — by William Shakespeare"
+    validations:
+      required: true
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: "The Dream Solution"
+      description: Describe what you'd love to see implemented. Be as specific as possible.
+      placeholder: "Explain how the feature should function, e.g., new conversion options, folder settings, etc."
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: "Alternatives"
+      description: Have you considered other ways to solve this problem? Share them with us!
+      placeholder: "Hint: Optional, e.g., alternative approaches or tools."
+    validations:
+      required: false
+  - type: textarea
+    id: context
+    attributes:
+      label: "Context & Relevance"
+      description: How will this feature be useful for screencast-autoconvert users? Provide examples of use-cases where it would help.
+      placeholder: "Hint: Optional, e.g., specific compatibility needs or workflows."
+    validations:
+      required: false
+  - type: textarea
+    id: examples
+    attributes:
+      label: "Screenshots or Additional Material"
+      description: If you have screenshots, sketches, or other material to help us understand your feature request, include them here.
+      placeholder: "Hint: Optional, e.g., mockups, example outputs, etc."
+    validations:
+      required: false
+  - type: dropdown
+    id: contribution
+    attributes:
+      label: "Willing to Contribute?"
+      description: Would you be willing to help implement this feature?
+      options:
+        - "Yes"
+        - "No"

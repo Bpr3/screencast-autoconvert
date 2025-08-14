@@ -1,0 +1,81 @@
+name: "❓ Ask a Question"
+description: Ask a question about screencast-autoconvert.
+title: "❓ [QUESTION] - <title>"
+labels:
+  - "question"
+assignees:
+  - "Bpr3"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        <p align="center">
+          <em><a href="https://github.com/Bpr3/screencast-autoconvert">screencast-autoconvert Repository</a> — Licensed under MIT.</em>
+        </p>
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: "Before Submitting"
+      description: Please confirm the following to help us answer your question efficiently.
+      options:
+        - label: I have read the project's README.md and checked existing GitHub issues.
+          required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: "Question"
+      description: Please provide a clear and concise question.
+      placeholder: "Hint: ‘brevity is the soul of wit’, Hamlet — by William Shakespeare"
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: "Context"
+      description: Why are you asking this question? Are you facing any challenges or limitations? Understanding your context helps us give a more relevant answer.
+      placeholder: "Hint: Optional, e.g., code snippets, error messages, specific use case, etc."
+    validations:
+      required: false
+  - type: textarea
+    id: examples
+    attributes:
+      label: "Screenshots or Additional Material"
+      description: If applicable, add screenshots, code snippets, or other material to help us understand your question better.
+      placeholder: "Hint: Optional, e.g., screenshots, error logs, etc."
+    validations:
+      required: false
+  - type: markdown
+    attributes:
+      value: "### Environment Information"
+  - type: dropdown
+    id: os
+    attributes:
+      label: "Operating System"
+      description: What operating system are you using? The project is designed for Ubuntu/GNOME.
+      options:
+        - "Ubuntu"
+        - "Other Linux (e.g., Fedora, Arch)"
+  - type: input
+    id: other-os
+    attributes:
+      label: "Other Operating System"
+      description: "Only fill this if you selected 'Other' in the Operating System dropdown."
+      placeholder: "e.g., Debian 12"
+    validations:
+      required: false
+  - type: input
+    id: ffmpeg-version
+    attributes:
+      label: "FFmpeg Version"
+      description: What version of FFmpeg are you using? Run 'ffmpeg -version' to check.
+      placeholder: "e.g., 4.4.2"
+    validations:
+      required: true
+  - type: input
+    id: inotify-tools-version
+    attributes:
+      label: "inotify-tools Version"
+      description: What version of inotify-tools are you using? Run 'inotifywait --version' to check.
+      placeholder: "e.g., 3.22.1.0"
+    validations:
+      required: true
