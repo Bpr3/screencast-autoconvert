@@ -1,0 +1,106 @@
+name: "🐛 Bug Report"
+description: Create a report to help us improve screencast-autoconvert.
+title: "🐛 [BUG] - <title>"
+labels:
+  - "bug"
+assignees:
+  - "Bpr3"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        <p align="center">
+          <em><a href="https://github.com/Bpr3/screencast-autoconvert">screencast-autoconvert Repository</a> — Licensed under MIT.</em>
+        </p>
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: "Before Submitting"
+      description: Please confirm the following to help us process your issue in a timely manner.
+      options:
+        - label: I have tried the project on Ubuntu/GNOME.
+          required: true
+        - label: I have considered using the Docker setup or ensured dependencies (ffmpeg, inotify-tools) are installed.
+          required: false
+        - label: I have checked the README.md and existing issues.
+          required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: "Description"
+      description: Please provide a clear and concise description of what's not working as expected.
+      placeholder: "Hint: ‘brevity is the soul of wit’, Hamlet — by William Shakespeare"
+    validations:
+      required: true
+  - type: textarea
+    id: reprod
+    attributes:
+      label: "Reproduction Steps"
+      description: Help us squash this bug by providing a step-by-step guide.
+      value: |
+        1. Navigate to '...'
+        2. Run '....'
+        3. Observe '....'
+      render: bash
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: "Expected Behavior"
+      description: Tell us what you were expecting when the bug appeared.
+      placeholder: "Describe the expected outcome."
+    validations:
+      required: true
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: "Screenshots or Logs"
+      description: If possible, add screenshots or error logs to help us see what you're seeing.
+      placeholder: "Hint: Optional, e.g., ffmpeg output, systemd logs, etc."
+    validations:
+      required: false
+  - type: markdown
+    attributes:
+      value: "### Environment Information"
+  - type: dropdown
+    id: os
+    attributes:
+      label: "Operating System"
+      description: What operating system were you using when the bug occurred? The project is designed for Ubuntu/GNOME.
+      options:
+        - "Ubuntu"
+        - "Other Linux"
+        - "Other"
+  - type: input
+    id: other-os
+    attributes:
+      label: "Other Operating System"
+      description: "Only fill this if you selected 'Other' in the Operating System dropdown."
+      placeholder: "e.g., Debian 12"
+    validations:
+      required: false
+  - type: input
+    id: ffmpeg-version
+    attributes:
+      label: "FFmpeg Version"
+      description: What version of FFmpeg are you using? Run 'ffmpeg -version' to check.
+      placeholder: "e.g., 4.4.2"
+    validations:
+      required: true
+  - type: input
+    id: inotify-tools-version
+    attributes:
+      label: "inotify-tools Version"
+      description: What version of inotify-tools are you using? Run 'inotifywait --version' to check.
+      placeholder: "e.g., 3.22.1.0"
+    validations:
+      required: true
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: "Additional Information"
+      description: Got more to say? Feel free to provide additional information, such as systemd status or dependency issues.
+      placeholder: "Hint: Optional, e.g., output of 'systemctl --user status screencast-autoconvert'."
+    validations:
+      required: false
