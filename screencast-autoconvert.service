@@ -1,0 +1,12 @@
+[Unit]
+Description=Auto-convert new Screencasts .webm to .mp4 (H.265) and delete originals
+After=default.target
+
+[Service]
+Type=simple
+ExecStart=%h/bin/screencast_autoconvert.sh
+Restart=always
+RestartSec=2
+
+[Install]
+WantedBy=default.target
